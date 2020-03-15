@@ -8,7 +8,7 @@
     "startup": "before",
     "boot": "manual",
     "startup": "once",
-    "timeout": 500,
+    "timeout": 10,
 
     "hassio_api": true,
     "hassio_role": "backup",
