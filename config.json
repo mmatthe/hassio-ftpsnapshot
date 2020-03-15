@@ -1,0 +1,26 @@
+{
+    "name": "Hassio FTP Backup",
+    "version": "0.0.1",
+    "slug": "ftpbackup",
+    "description": "This addon creates a Home Assistant snapshot and uploads it to an FTP server.",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "map": ["backup:rw"],
+    "startup": "before",
+    "boot": "manual",
+    "startup": "once",
+    "timeout": 500,
+
+    "hassio_api": true,
+    "hassio_role": "backup",
+
+    "options": {
+	"ftpuser": "",
+	"ftppass": "",
+	"ftpurl": "ftp://theserver/the/share/and/directory/name/"
+    },
+    "schema": {
+	"ftpuser": "str",
+	"ftppass": "str",
+	"ftpurl": "str"
+    }
+}
